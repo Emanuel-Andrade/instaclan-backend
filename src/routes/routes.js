@@ -19,7 +19,7 @@ router.get('/user/image/:image', User.getUserProfileImage);
 router.put('/user', Auth, userValidation.updateValidation(), validator, profileImageUpload.single('profileImage'), User.update);
 
 // Photos
-router.get('/', Auth, Photo.getAll); // Get current user all photos
+router.get('/', Photo.getAll); // Get current user all photos
 router.get('/images/search', Auth, Photo.getPhotoByQuery);
 router.get('/images/:id', Photo.getPhotoById);
 router.get('/user/images/:id', Photo.getUserAllPhotos);
